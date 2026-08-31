@@ -26,7 +26,7 @@ header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);bac
 .hero-top{display:flex;flex-direction:column;align-items:center;text-align:center;max-width:640px;margin:0 auto 40px}
 .hero-photo{margin:0 0 20px}
 .hero-photo img{width:172px;height:172px;border-radius:50%;object-fit:cover;display:block;border:3px solid var(--cyan);box-shadow:0 0 0 5px var(--panel);filter:grayscale(.15) contrast(1.03)}
-.hero h1{font-family:"Fraunces",serif;font-weight:600;font-size:2.6rem;margin:0 0 8px;line-height:1.05;letter-spacing:-.01em}
+.hero h1{font-family:"Fraunces",serif;font-weight:600;font-size:3.1rem;margin:0 0 8px;line-height:1.05;letter-spacing:-.01em}
 .hero .role{color:var(--cyan);font-weight:500;font-size:1.05rem;margin:0;font-family:"Fraunces",serif}
 .hero-bottom{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:start}
 .hero p.lead{color:var(--mut);font-size:1.02rem;text-align:justify;text-justify:inter-word;hyphens:auto}
@@ -36,7 +36,8 @@ header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);bac
 .hero-facts strong{color:var(--ink);font-weight:600}
 .btn{display:inline-block;padding:10px 18px;border-radius:3px;font-weight:600;font-size:.85rem;border:1px solid var(--line);color:var(--ink);font-family:"IBM Plex Mono",monospace}
 .btn-primary{background:var(--cyan);color:var(--bg);border-color:var(--cyan)}
-.btn-doc{background:transparent;border-color:var(--amber);color:var(--amber);white-space:nowrap}
+.btn-doc{background:var(--amber);border-color:var(--amber);color:var(--bg);white-space:nowrap;box-shadow:0 2px 0 rgba(28,93,120,.15);transition:transform .12s,box-shadow .12s}
+.btn-doc:hover{transform:translateY(-1px);box-shadow:0 4px 10px rgba(166,98,14,.35)}
 .hero-card{background:var(--panel);border:1px solid var(--line);border-radius:3px;padding:26px;position:relative}
 .hero-card::before{content:"";position:absolute;inset:6px;border:1px solid rgba(28,93,120,.15);pointer-events:none}
 .hero-card h4{margin:0 0 12px;color:var(--amber);font-size:.72rem;letter-spacing:1.5px;text-transform:uppercase;font-family:"IBM Plex Mono",monospace}
@@ -56,7 +57,8 @@ main.wrap{counter-reset:dwg}
 .project.thesis.dp{border:1.5px solid var(--cyan);box-shadow:0 12px 28px -14px rgba(28,93,120,.35);background:linear-gradient(180deg,rgba(28,93,120,.05),transparent 55%)}
 .project.thesis.dp::before{background:var(--cyan);content:"DP"}
 .project.thesis.dp .prep-note{font-weight:600;color:var(--amber)}
-.project.thesis .btn-doc{border-color:var(--cyan);color:var(--cyan)}
+.project.thesis .btn-doc{background:var(--cyan);border-color:var(--cyan);color:var(--bg);box-shadow:0 2px 0 rgba(166,98,14,.15)}
+.project.thesis .btn-doc:hover{box-shadow:0 4px 10px rgba(28,93,120,.35)}
 .project-head{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;flex-wrap:wrap;padding-top:4px}
 .doc-links{display:flex;gap:10px;flex-wrap:wrap}
 .project h3{margin:0;font-size:1.28rem;font-family:"Fraunces",serif;font-weight:600}
@@ -92,7 +94,7 @@ footer .wrap{padding:26px 20px;display:flex;justify-content:space-between;flex-w
 .pm-card p,.pm-card li{font-size:.88rem;color:#2c3944;line-height:1.6;text-align:justify;text-justify:inter-word;hyphens:auto}
 .pm-card ul{padding-left:18px;margin:6px 0}
 .pm-x{position:absolute;top:14px;right:16px;font-size:1.6rem;color:var(--mut);cursor:pointer;background:none;border:0;line-height:1;z-index:1}
-@media(max-width:940px){.hero{padding-top:36px}.hero-bottom{grid-template-columns:1fr}.hero h1{font-size:2.1rem}
+@media(max-width:940px){.hero{padding-top:36px}.hero-bottom{grid-template-columns:1fr}.hero h1{font-size:2.4rem}
 .topbar{display:none}}
 @media(max-width:480px){.wrap{padding:14px}.project{padding:20px 16px 18px}.grid{columns:2 128px;column-gap:10px}.nav-in{gap:16px;padding:10px 14px}.hero{padding:32px 14px 30px}.btn-doc{white-space:normal;text-align:center}.doc-links{width:100%}.doc-links .btn-doc{flex:1 1 auto}}
 .menu-toggle{display:inline-flex;flex-direction:column;justify-content:center;align-items:center;width:36px;height:36px;border:1px solid var(--line);border-radius:3px;background:transparent;cursor:pointer;margin-left:auto;padding:0}
