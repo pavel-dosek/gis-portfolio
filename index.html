@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500;600&family=Fraunces:opsz,wght@9..144,600&family=Karla:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#ffffff;--panel:#f4f7f9;--card:#eef3f6;--ink:#14191d;--mut:#5c6b76;--cyan:#1c5d78;--amber:#e67e22;--czu:#00aaa0;--line:rgba(28,93,120,.28);--grid:rgba(28,93,120,.08)}
+:root{--bg:#ffffff;--panel:#f4f7f9;--card:#eef3f6;--ink:#14191d;--mut:#5c6b76;--cyan:#1c5d78;--amber:#2f7a00;--amber-text:#2f7a00;--czu:#00aaa0;--line:rgba(28,93,120,.28);--grid:rgba(28,93,120,.08)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;font-family:"Karla",system-ui,-apple-system,Roboto,Arial,sans-serif;
  background:linear-gradient(var(--grid),transparent 1px),linear-gradient(90deg,var(--grid),transparent 1px);
@@ -39,10 +39,10 @@ header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);bac
 .hero-facts strong{color:var(--ink);font-weight:600}
 .btn{display:inline-block;padding:10px 18px;border-radius:3px;font-weight:600;font-size:.85rem;border:1px solid var(--line);color:var(--ink);font-family:"IBM Plex Mono",monospace;background:var(--bg);box-shadow:0 2px 0 rgba(28,93,120,.15);transition:transform .12s,box-shadow .12s}
 .btn:hover{transform:translateY(-1px);box-shadow:0 4px 10px rgba(28,93,120,.2)}
-.btn-primary{background:var(--cyan);color:var(--bg);border-color:var(--cyan);box-shadow:0 2px 0 rgba(230,126,34,.15)}
+.btn-primary{background:var(--cyan);color:var(--bg);border-color:var(--cyan);box-shadow:0 2px 0 rgba(47,122,0,.15)}
 .btn-primary:hover{box-shadow:0 4px 10px rgba(28,93,120,.35)}
 .btn-doc{background:var(--amber);border-color:var(--amber);color:var(--bg);white-space:nowrap;box-shadow:0 2px 0 rgba(28,93,120,.15);transition:transform .12s,box-shadow .12s}
-.btn-doc:hover{transform:translateY(-1px);box-shadow:0 4px 10px rgba(230,126,34,.35)}
+.btn-doc:hover{transform:translateY(-1px);box-shadow:0 4px 10px rgba(47,122,0,.4)}
 .hero-card{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:18px 20px;position:relative;box-shadow:0 1px 3px rgba(28,93,120,.15),0 1px 2px rgba(28,93,120,.1)}
 .hero-card h4{margin:0 0 12px;color:var(--cyan);font-size:.72rem;letter-spacing:1.5px;text-transform:uppercase;font-family:"IBM Plex Mono",monospace}
 .hero-card ul{margin:0;padding-left:18px;color:var(--mut);font-size:.9rem}
@@ -57,11 +57,11 @@ main.wrap{counter-reset:dwg}
 .project{background:var(--panel);border:1px solid var(--line);border-radius:3px;padding:28px 26px 26px;margin:30px 0;position:relative;counter-increment:dwg}
 .project::before{content:"GIS " counter(dwg,decimal-leading-zero);position:absolute;top:-11px;left:20px;background:var(--amber);color:var(--bg);font-family:"IBM Plex Mono",monospace;font-size:.66rem;font-weight:600;padding:3px 9px;border-radius:2px;letter-spacing:.05em}
 .project.thesis{border-color:var(--line);box-shadow:none;counter-increment:none}
-.project.thesis::before{background:var(--czu);content:"BP"}
+.project.thesis::before{background:var(--czu);color:var(--bg);content:"BP"}
 .project.thesis.dp{border:1.5px solid var(--czu);box-shadow:0 12px 28px -14px rgba(0,170,160,.35);background:linear-gradient(180deg,rgba(0,170,160,.06),transparent 55%)}
-.project.thesis.dp::before{background:var(--czu);content:"DP"}
+.project.thesis.dp::before{background:var(--czu);color:var(--bg);content:"DP"}
 .project.thesis.dp .prep-note{font-weight:700;color:var(--czu)}
-.project.thesis .btn-doc{background:var(--czu);border-color:var(--czu);color:var(--bg);box-shadow:0 2px 0 rgba(230,126,34,.15)}
+.project.thesis .btn-doc{background:var(--czu);border-color:var(--czu);color:var(--bg);box-shadow:0 2px 0 rgba(47,122,0,.15)}
 .project.thesis .btn-doc:hover{box-shadow:0 4px 10px rgba(0,170,160,.35)}
 .project-head{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;flex-wrap:wrap;padding-top:4px}
 .doc-links{display:flex;gap:10px;flex-wrap:wrap}
@@ -69,7 +69,7 @@ main.wrap{counter-reset:dwg}
 .meta{color:var(--mut);font-size:.82rem;margin:6px 0 0;font-family:"IBM Plex Mono",monospace}
 .desc{color:#2c3944;margin:14px 0;font-size:.94rem;line-height:1.6;text-align:justify;text-justify:inter-word;hyphens:auto}
 .tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
-.tag{background:rgba(230,126,34,.08);border:1px solid rgba(230,126,34,.3);color:var(--amber);font-size:.72rem;padding:4px 10px;border-radius:2px;font-family:"IBM Plex Mono",monospace}
+.tag{background:rgba(47,122,0,.1);border:1px solid rgba(47,122,0,.35);color:var(--amber-text);font-size:.72rem;padding:4px 10px;border-radius:2px;font-family:"IBM Plex Mono",monospace}
 .project.thesis .tag{background:rgba(0,170,160,.08);border:1px solid var(--line);color:var(--czu)}
 .grid{columns:4 220px;column-gap:14px}
 .thumb{margin:0 0 14px;break-inside:avoid;display:block;width:100%;cursor:zoom-in;background:var(--panel);border:1px solid var(--line);border-radius:0;overflow:hidden;box-shadow:0 1px 3px rgba(20,25,29,.06);transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
@@ -113,10 +113,10 @@ footer .wrap{padding:26px 20px;display:flex;justify-content:space-between;flex-w
 .page-toc nav{display:flex;flex-direction:column;gap:1px;padding:12px 20px 18px}
 .page-toc a{font-family:"Karla",sans-serif;font-size:.95rem;color:var(--mut);padding:9px 0 9px 11px;border-left:2px solid transparent;line-height:1.35;transition:color .15s ease,border-color .15s ease}
 .page-toc a:hover{color:var(--cyan)}
-.page-toc a.toc-gis:hover{color:var(--amber)}
+.page-toc a.toc-gis:hover{color:var(--amber-text)}
 .page-toc a.toc-thesis:hover{color:var(--czu)}
 .page-toc a.active{color:var(--cyan);border-left-color:var(--cyan);font-weight:600}
-.page-toc a.toc-gis.active{color:var(--amber);border-left-color:var(--amber)}
+.page-toc a.toc-gis.active{color:var(--amber-text);border-left-color:var(--amber)}
 .page-toc a.toc-thesis.active{color:var(--czu);border-left-color:var(--czu)}
 @media(min-width:980px){.menu-toggle{display:none}
 .page-toc{display:block!important;position:fixed;top:160px;left:20px;right:auto;width:164px;max-height:calc(100vh - 190px);overflow-y:auto;margin:0;border:0;border-radius:0;background:transparent;box-shadow:none;z-index:40}
