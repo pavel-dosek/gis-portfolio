@@ -27,15 +27,17 @@ header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);bac
 .hero-photo{margin:0 0 20px}
 .hero-photo img{width:172px;height:172px;border-radius:50%;object-fit:cover;display:block;border:3px solid var(--cyan);box-shadow:0 0 0 5px var(--panel);filter:grayscale(.15) contrast(1.03)}
 .hero h1{font-family:"Fraunces",serif;font-weight:600;font-size:3.1rem;margin:0 0 8px;line-height:1.05;letter-spacing:-.01em}
-.hero .role{color:var(--cyan);font-weight:500;font-size:1.05rem;margin:0;font-family:"Fraunces",serif}
+.hero .role{color:var(--cyan);font-weight:500;font-size:1.3rem;margin:0;font-family:"Fraunces",serif}
 .hero-bottom{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:start}
 .hero p.lead{color:var(--mut);font-size:1.02rem;text-align:justify;text-justify:inter-word;hyphens:auto}
 .hero .contact{margin-top:22px;display:flex;gap:12px;flex-wrap:wrap}
 .hero-facts{display:flex;gap:18px;flex-wrap:wrap;margin:14px 0 0;font-family:"IBM Plex Mono",monospace;font-size:.82rem;color:var(--mut)}
 .hero-facts>span{display:inline-flex;align-items:center;gap:6px}
 .hero-facts strong{color:var(--ink);font-weight:600}
-.btn{display:inline-block;padding:10px 18px;border-radius:3px;font-weight:600;font-size:.85rem;border:1px solid var(--line);color:var(--ink);font-family:"IBM Plex Mono",monospace}
-.btn-primary{background:var(--cyan);color:var(--bg);border-color:var(--cyan)}
+.btn{display:inline-block;padding:10px 18px;border-radius:3px;font-weight:600;font-size:.85rem;border:1px solid var(--line);color:var(--ink);font-family:"IBM Plex Mono",monospace;background:var(--bg);box-shadow:0 2px 0 rgba(28,93,120,.15);transition:transform .12s,box-shadow .12s}
+.btn:hover{transform:translateY(-1px);box-shadow:0 4px 10px rgba(28,93,120,.2)}
+.btn-primary{background:var(--cyan);color:var(--bg);border-color:var(--cyan);box-shadow:0 2px 0 rgba(166,98,14,.15)}
+.btn-primary:hover{box-shadow:0 4px 10px rgba(28,93,120,.35)}
 .btn-doc{background:var(--amber);border-color:var(--amber);color:var(--bg);white-space:nowrap;box-shadow:0 2px 0 rgba(28,93,120,.15);transition:transform .12s,box-shadow .12s}
 .btn-doc:hover{transform:translateY(-1px);box-shadow:0 4px 10px rgba(166,98,14,.35)}
 .hero-card{background:var(--panel);border:1px solid var(--line);border-radius:3px;padding:26px;position:relative}
@@ -56,7 +58,7 @@ main.wrap{counter-reset:dwg}
 .project.thesis::before{background:var(--cyan);content:"BP"}
 .project.thesis.dp{border:1.5px solid var(--cyan);box-shadow:0 12px 28px -14px rgba(28,93,120,.35);background:linear-gradient(180deg,rgba(28,93,120,.05),transparent 55%)}
 .project.thesis.dp::before{background:var(--cyan);content:"DP"}
-.project.thesis.dp .prep-note{font-weight:600;color:var(--amber)}
+.project.thesis.dp .prep-note{font-weight:700;color:var(--cyan)}
 .project.thesis .btn-doc{background:var(--cyan);border-color:var(--cyan);color:var(--bg);box-shadow:0 2px 0 rgba(166,98,14,.15)}
 .project.thesis .btn-doc:hover{box-shadow:0 4px 10px rgba(28,93,120,.35)}
 .project-head{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;flex-wrap:wrap;padding-top:4px}
@@ -65,7 +67,8 @@ main.wrap{counter-reset:dwg}
 .meta{color:var(--mut);font-size:.82rem;margin:6px 0 0;font-family:"IBM Plex Mono",monospace}
 .desc{color:#2c3944;margin:14px 0;font-size:.94rem;line-height:1.6;text-align:justify;text-justify:inter-word;hyphens:auto}
 .tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
-.tag{background:rgba(28,93,120,.06);border:1px solid var(--line);color:var(--cyan);font-size:.72rem;padding:4px 10px;border-radius:2px;font-family:"IBM Plex Mono",monospace}
+.tag{background:rgba(166,98,14,.08);border:1px solid rgba(166,98,14,.3);color:var(--amber);font-size:.72rem;padding:4px 10px;border-radius:2px;font-family:"IBM Plex Mono",monospace}
+.project.thesis .tag{background:rgba(28,93,120,.06);border:1px solid var(--line);color:var(--cyan)}
 .grid{columns:4 220px;column-gap:14px}
 .thumb{margin:0 0 14px;break-inside:avoid;display:block;width:100%;cursor:zoom-in;background:var(--panel);border:1px solid var(--line);border-radius:0;overflow:hidden;box-shadow:0 1px 3px rgba(20,25,29,.06);transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
 .thumb:hover{transform:translateY(-4px);border-color:var(--cyan);box-shadow:0 14px 26px rgba(20,25,29,.16)}
@@ -108,7 +111,9 @@ footer .wrap{padding:26px 20px;display:flex;justify-content:space-between;flex-w
 .page-toc nav{display:flex;flex-direction:column;gap:1px;padding:12px 20px 18px}
 .page-toc a{font-family:"Karla",sans-serif;font-size:.95rem;color:var(--mut);padding:9px 0 9px 11px;border-left:2px solid transparent;line-height:1.35;transition:color .15s ease,border-color .15s ease}
 .page-toc a:hover{color:var(--cyan)}
+.page-toc a.toc-gis:hover{color:var(--amber)}
 .page-toc a.active{color:var(--cyan);border-left-color:var(--cyan);font-weight:600}
+.page-toc a.toc-gis.active{color:var(--amber);border-left-color:var(--amber)}
 @media(min-width:980px){.menu-toggle{display:none}
 .page-toc{display:block!important;position:fixed;top:160px;left:20px;right:auto;width:164px;max-height:calc(100vh - 190px);overflow-y:auto;margin:0;border:0;border-radius:0;background:transparent;box-shadow:none;z-index:40}
 .page-toc-label{display:block;font-family:"Fraunces",serif;font-weight:600;font-size:1.05rem;letter-spacing:.02em;color:var(--ink);margin:0 0 10px;padding:0 0 8px;border-bottom:1px solid var(--line);cursor:default}
@@ -123,18 +128,18 @@ body{padding-left:200px}header.nav{margin-left:-200px}footer{margin-left:-200px}
 <div class="page-toc-label"><span class="cz">Obsah</span><span class="en">Contents</span></div>
 <nav id="tocNav">
 <a href="#uvod"><span class="cz">Úvod</span><span class="en">Introduction</span></a>
-<a href="#diplomova-prace"><span class="cz">Diplomová práce</span><span class="en">Master's Thesis</span></a>
-<a href="#bakalarska-prace"><span class="cz">Bakalářská práce</span><span class="en">Bachelor's Thesis</span></a>
-<a href="#pozemkove-upravy"><span class="cz">Pozemkové úpravy</span><span class="en">Land Consolidation</span></a>
-<a href="#gis-ii"><span class="cz">GIS II</span><span class="en">GIS II</span></a>
-<a href="#sber-dat"><span class="cz">Sběr prostorových dat</span><span class="en">Spatial Data Collection</span></a>
-<a href="#protierozni-ochrana"><span class="cz">Půda a protierozní ochrana</span><span class="en">Soil &amp; Erosion Control</span></a>
-<a href="#rekultivace"><span class="cz">Rekultivace</span><span class="en">Land Reclamation</span></a>
-<a href="#gis-i"><span class="cz">GIS I</span><span class="en">GIS I</span></a>
-<a href="#vodni-hospodarstvi"><span class="cz">Vodní hospodářství</span><span class="en">Water Management</span></a>
-<a href="#regionalni-planovani"><span class="cz">Regionální plánování</span><span class="en">Regional Planning</span></a>
-<a href="#uzemni-planovani"><span class="cz">Územní plánování</span><span class="en">Spatial Planning</span></a>
-<a href="#krajinna-zelen"><span class="cz">Krajinná zeleň</span><span class="en">Landscape Greenery</span></a>
+<a href="#diplomova-prace" class="toc-thesis"><span class="cz">Diplomová práce</span><span class="en">Master's Thesis</span></a>
+<a href="#bakalarska-prace" class="toc-thesis"><span class="cz">Bakalářská práce</span><span class="en">Bachelor's Thesis</span></a>
+<a href="#pozemkove-upravy" class="toc-gis"><span class="cz">Pozemkové úpravy</span><span class="en">Land Consolidation</span></a>
+<a href="#gis-ii" class="toc-gis"><span class="cz">GIS II</span><span class="en">GIS II</span></a>
+<a href="#sber-dat" class="toc-gis"><span class="cz">Sběr prostorových dat</span><span class="en">Spatial Data Collection</span></a>
+<a href="#protierozni-ochrana" class="toc-gis"><span class="cz">Půda a protierozní ochrana</span><span class="en">Soil &amp; Erosion Control</span></a>
+<a href="#rekultivace" class="toc-gis"><span class="cz">Rekultivace</span><span class="en">Land Reclamation</span></a>
+<a href="#gis-i" class="toc-gis"><span class="cz">GIS I</span><span class="en">GIS I</span></a>
+<a href="#vodni-hospodarstvi" class="toc-gis"><span class="cz">Vodní hospodářství</span><span class="en">Water Management</span></a>
+<a href="#regionalni-planovani" class="toc-gis"><span class="cz">Regionální plánování</span><span class="en">Regional Planning</span></a>
+<a href="#uzemni-planovani" class="toc-gis"><span class="cz">Územní plánování</span><span class="en">Spatial Planning</span></a>
+<a href="#krajinna-zelen" class="toc-gis"><span class="cz">Krajinná zeleň</span><span class="en">Landscape Greenery</span></a>
 </nav>
 </aside>
 <section class="hero" id="uvod"><div class="hero-top"><figure class="hero-photo"><img src="images/profil.jpg" alt="Pavel Došek" loading="lazy"></figure><h1>Pavel Došek</h1><p class="role"><span class="cz">GIS analytik · Regionální environmentální správa</span><span class="en">GIS Analyst · Regional Environmental Administration</span></p></div><div class="hero-bottom"><div><p class="lead"><span class="cz">Student oboru Regionální environmentální správa na Fakultě životního prostředí ČZU v Praze. Zaměřuji se na prostorové analýzy, pozemkové úpravy, vodní hospodářství a protierozní ochranu v ArcGIS Pro, a rovněž na tvorbu interaktivních mapových aplikací v ArcGIS Online.</span><span class="en">Student of Regional Environmental Administration at the Faculty of Environmental Sciences, Czech University of Life Sciences Prague. I focus on spatial analysis, land consolidation, water management and soil-erosion control in ArcGIS Pro, as well as building interactive map applications in ArcGIS Online.</span></p><p class="hero-facts"><span>📍 <span class="cz">Praha, ČR</span><span class="en">Prague, Czechia</span></span><span>🎓 <span class="cz">Ukončení studia: <strong>2027</strong></span><span class="en">Expected graduation: <strong>2027</strong></span></span></p><div class="contact"><a class="btn btn-primary" href="mailto:Paveldosek@gmail.com"><span class="cz">Napsat e-mail</span><span class="en">Email me</span></a><a class="btn" href="https://www.linkedin.com/in/pavel-došek-20b755424" target="_blank" rel="noopener">LinkedIn</a><a class="btn btn-doc" href="docs/cv-pavel-dosek.pdf" target="_blank" rel="noopener"><span class="cz">Stáhnout CV (PDF)</span><span class="en">Download CV (PDF)</span></a></div></div><aside class="hero-card"><h4><span class="cz">Dovednosti &amp; nástroje</span><span class="en">Skills &amp; tools</span></h4><ul><li>ArcGIS Pro</li><li><span class="cz">ArcGIS Online (webové mapové aplikace)</span><span class="en">ArcGIS Online (web map applications)</span></li><li><span class="cz">Prostorové a rastrové analýzy</span><span class="en">Spatial &amp; raster analysis</span></li><li><span class="cz">Modelování eroze (USLE)</span><span class="en">Erosion modelling (USLE)</span></li><li><span class="cz">Hydrologické analýzy</span><span class="en">Hydrological analysis</span></li><li><span class="cz">Geodatabáze &amp; datové modely</span><span class="en">Geodatabases &amp; data models</span></li><li><span class="cz">Kartografie a tvorba map</span><span class="en">Cartography &amp; map design</span></li><li><span class="cz">Terénní sběr dat</span><span class="en">Field data collection</span></li></ul></aside></div></section>
