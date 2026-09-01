@@ -10,6 +10,7 @@
 <style>
 :root{--bg:#ffffff;--panel:#f4f7f9;--card:#eef3f6;--ink:#14191d;--mut:#5c6b76;--cyan:#1c5d78;--amber:#2f7a00;--amber-text:#2f7a00;--czu:#00aaa0;--line:rgba(28,93,120,.28);--grid:rgba(28,93,120,.08)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
+.hero,.project{scroll-margin-top:var(--header-offset,90px)}
 body{margin:0;font-family:"Karla",system-ui,-apple-system,Roboto,Arial,sans-serif;
  background:linear-gradient(var(--grid),transparent 1px),linear-gradient(90deg,var(--grid),transparent 1px);
  background-size:28px 28px;background-color:var(--bg);color:var(--ink);line-height:1.6}
@@ -245,6 +246,10 @@ body{padding-left:200px}header.nav{margin-left:-200px}footer{margin-left:-200px}
 <script>document.getElementById("yr").textContent=new Date().getFullYear();
 const navEl=document.querySelector('header.nav'),pageToc=document.getElementById('pageToc'),topbarEl=document.querySelector('.topbar');
 function setTocTop(){if(!navEl||!pageToc)return;const navH=navEl.getBoundingClientRect().height;const topbarH=topbarEl?topbarEl.getBoundingClientRect().height:0;const total=navH+topbarH;if(window.innerWidth<980){pageToc.style.position='';pageToc.style.top=total+'px';pageToc.style.maxHeight='';return;}avoidFooterOverlap();}
+function setHeaderOffset(){const navH=navEl?navEl.getBoundingClientRect().height:0;const topbarH=topbarEl?topbarEl.getBoundingClientRect().height:0;document.documentElement.style.setProperty('--header-offset',(navH+topbarH+24)+'px')}
+setHeaderOffset();window.addEventListener('resize',setHeaderOffset);window.addEventListener('load',setHeaderOffset);
+if(document.fonts&&document.fonts.ready){document.fonts.ready.then(setHeaderOffset)}
+setTimeout(setHeaderOffset,300);setTimeout(setHeaderOffset,1000);
 const footerEl=document.querySelector('footer');
 function avoidFooterOverlap(){if(!pageToc||!navEl||window.innerWidth<980)return;const navH=navEl.getBoundingClientRect().height;const topbarH=topbarEl?topbarEl.getBoundingClientRect().height:0;const total=navH+topbarH;const desiredTop=total+16;const desiredMaxHeight=window.innerHeight-(total+30);const panelHeight=Math.min(pageToc.scrollHeight,desiredMaxHeight);const buffer=24;const footerTop=footerEl?footerEl.getBoundingClientRect().top:Infinity;if(footerTop<desiredTop+panelHeight+buffer){const scrollY=window.scrollY||window.pageYOffset;const footerDocTop=footerTop+scrollY;pageToc.style.position='absolute';pageToc.style.top=Math.max(desiredTop,footerDocTop-panelHeight-buffer)+'px';pageToc.style.maxHeight=panelHeight+'px';}else{pageToc.style.position='fixed';pageToc.style.top=desiredTop+'px';pageToc.style.maxHeight='calc(100vh - '+(total+30)+'px)';}}
 window.addEventListener('scroll',avoidFooterOverlap,{passive:true});
