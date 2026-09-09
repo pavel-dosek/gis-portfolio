@@ -1,0 +1,1 @@
+window.__reportLinks=window.__reportLinks||{};window.__reportLinks['davka-2/rekultivace']={"05": [{"x": 47.76, "y": 18.62, "w": 34.86, "h": 1.6, "url": "https://cs.wikipedia.org/wiki/Lom_%C4%8CSA"}, {"x": 11.9, "y": 13.16, "w": 49.57, "h": 1.72, "url": "http://geoportal.cuzk.cz/WMS_ORTOFOTO_PUB/WMService.aspx"}]};

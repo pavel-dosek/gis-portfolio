@@ -1,0 +1,1 @@
+window.__reportLinks=window.__reportLinks||{};window.__reportLinks['davka-2/gis-i']={"10": [{"x": 29.5, "y": 22.45, "w": 50.38, "h": 1.59, "url": "http://geoportal.cuzk.cz/WMS_ORTOFOTO_PUB/WMService.aspx"}]};
