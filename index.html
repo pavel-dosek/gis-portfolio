@@ -93,8 +93,13 @@ footer .wrap{padding:26px 20px;display:flex;justify-content:space-between;flex-w
 .rv{position:fixed;inset:0;background:rgba(6,14,22,.97);display:none;z-index:120;overflow-y:auto}
 .rv.open{display:block}
 .rv-title{position:sticky;top:0;background:rgba(6,14,22,.97);color:#eef3f6;padding:14px 20px;font-family:"IBM Plex Mono",monospace;font-size:.85rem;display:flex;justify-content:space-between;align-items:center;z-index:2;border-bottom:1px solid rgba(255,255,255,.08)}
-.rv-title button{background:none;border:0;color:#6fc3e0;font-size:1.8rem;cursor:pointer;line-height:1}
-.rv-pages{max-width:900px;margin:0 auto;padding:20px 16px 60px;display:flex;flex-direction:column;gap:16px}
+.rv-title #rvx{background:none;border:0;color:#6fc3e0;font-size:1.8rem;cursor:pointer;line-height:1}
+.rv-pages{max-width:var(--rv-w,900px);margin:0 auto;padding:20px 16px 60px;display:flex;flex-direction:column;gap:16px;transition:max-width .15s ease}
+.rv-controls{display:flex;align-items:center;gap:8px}
+.rv-zoom-btn{background:none;border:1px solid rgba(255,255,255,.28);color:#6fc3e0;font-size:1rem;cursor:pointer;line-height:1;padding:5px 11px;border-radius:3px;font-family:"IBM Plex Mono",monospace}
+.rv-zoom-btn:hover{border-color:#6fc3e0}
+.rv-zoom-label{color:#9fb4c0;font-size:.78rem;min-width:38px;text-align:center;font-family:"IBM Plex Mono",monospace}
+@media(max-width:620px){.rv-zoom-label{display:none}}
 .rv-pages img{width:100%;display:block;border-radius:3px;box-shadow:0 6px 24px rgba(0,0,0,.5);user-select:none;-webkit-user-drag:none;pointer-events:none}
 .rv-page{position:relative;display:block}
 .rv-link{position:absolute;display:block;cursor:pointer;z-index:1}
@@ -317,11 +322,17 @@ lb.onclick=e=>{if(e.target===lb)lb.classList.remove('open')};
 document.addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;
  if(e.key==='Escape')lb.classList.remove('open');if(e.key==='ArrowLeft')show(idx-1);if(e.key==='ArrowRight')show(idx+1)});
 const rv=document.getElementById('rv'),rvpages=document.getElementById('rvpages'),rvtitle=document.getElementById('rvtitle');
-function closeReport(){rv.classList.remove('open');rvpages.innerHTML=''}
+function closeReport(){rv.classList.remove('open');rvpages.innerHTML='';document.body.style.overflow=''}
+let rvZoom=100;
+function applyRvZoom(){document.documentElement.style.setProperty('--rv-w',(900*rvZoom/100)+'px');const lbl=document.getElementById('rvzoomlabel');if(lbl)lbl.textContent=rvZoom+'%'}
 function openReport(folder,cz,en){
  rvpages.innerHTML='';
- rvtitle.innerHTML='<span><span class="cz">'+cz+'</span><span class="en">'+en+'</span></span><button id="rvx">&times;</button>';
+ rvZoom=100;
+ rvtitle.innerHTML='<span><span class="cz">'+cz+'</span><span class="en">'+en+'</span></span><div class="rv-controls"><button class="rv-zoom-btn" id="rvzoomout" title="Zmenšit">−</button><span class="rv-zoom-label" id="rvzoomlabel">100%</span><button class="rv-zoom-btn" id="rvzoomin" title="Zvětšit">+</button><button id="rvx">&times;</button></div>';
  document.getElementById('rvx').onclick=closeReport;
+ document.getElementById('rvzoomin').onclick=function(){rvZoom=Math.min(220,rvZoom+15);applyRvZoom()};
+ document.getElementById('rvzoomout').onclick=function(){rvZoom=Math.max(40,rvZoom-15);applyRvZoom()};
+ applyRvZoom();
  rv.classList.add('open');rv.scrollTop=0;document.body.style.overflow='hidden';
  function startPages(){
   let i=1,loaded=0;const max=80;
