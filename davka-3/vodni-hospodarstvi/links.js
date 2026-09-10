@@ -1,5 +1,72 @@
 window.__reportLinks = window.__reportLinks || {};
 window.__reportLinks['davka-3/vodni-hospodarstvi'] = {
+  "03": [
+    { url: "https://www.dibavod.cz/index.php?id=27", x: 27.27, y: 80.03, w: 45.22, h: 0.9 }
+  ],
+  "06": [
+    { url: "https://www.dibavod.cz/index.php?id=27", x: 21.34, y: 47.76, w: 57.07, h: 0.9 }
+  ],
+  "07": [
+    { url: "https://hydro.chmi.cz/hppsoldv/hpps_prfdyn.php?seq=2505258", x: 30.11, y: 89.23, w: 39.48, h: 1.03 }
+  ],
+  "08": [
+    { url: "https://hydro.chmi.cz/hppsevlist/download?seq=2505258", x: 28.48, y: 81.7, w: 42.74, h: 1.03 }
+  ],
+  "11": [
+    { url: "https://www.dibavod.cz/index.php?id=27", x: 22.61, y: 57.76, w: 54.53, h: 0.9 }
+  ],
+  "13": [
+    { url: "https://www.dibavod.cz/index.php?id=27", x: 29.26, y: 44.98, w: 41.23, h: 0.9 }
+  ],
+  "14": [
+    { url: "https://www.korunavysociny.cz/katalog/1041-pilska-nadrz-rekreacni-areal-pilak", x: 22.97, y: 47.5, w: 53.75, h: 0.9 },
+    { url: "https://www.vysocina.eu/turisticke-cile/4711-vodni-nadrz-pilska", x: 25.03, y: 86.19, w: 49.64, h: 0.9 }
+  ],
+  "15": [
+    { url: "https://www.calla.cz/atlas/detail.php?id=2183", x: 27.03, y: 64.99, w: 45.71, h: 0.9 }
+  ],
+  "16": [
+    { url: "https://www.calla.cz/atlas/detail.php?id=2183", x: 21.28, y: 58.79, w: 57.13, h: 0.9 }
+  ],
+  "17": [
+    { url: "https://www.dibavod.cz/index.php?id=27", x: 26.78, y: 59.51, w: 46.19, h: 0.9 }
+  ],
+  "18": [
+    { url: "https://www.povis.cz/html/index.html?povis.htm", x: 32.22, y: 63.75, w: 35.31, h: 0.9 },
+    { url: "https://www.povis.cz/html/index.html?povis.htm", x: 27.45, y: 77.43, w: 44.8, h: 0.9 },
+    { url: "https://www.povis.cz/html/index.html?povis.htm", x: 27.45, y: 89.14, w: 44.8, h: 0.9 }
+  ],
+  "19": [
+    { url: "https://www.povis.cz/html/index.html?povis.htm", x: 27.45, y: 17.87, w: 44.8, h: 0.9 },
+    { url: "https://www.povis.cz/html/index.html?povis.htm", x: 27.45, y: 29.63, w: 44.8, h: 0.68 }
+  ],
+  "20": [
+    { url: "https://www.dibavod.cz/index.php?id=27", x: 12.03, y: 68.15, w: 53.33, h: 0.94 }
+  ],
+  "21": [
+    { url: "https://www.dibavod.cz/index.php?id=27", x: 24.73, y: 54.6, w: 50.3, h: 0.9 }
+  ],
+  "22": [
+    { url: "https://www.dibavod.cz/index.php?id=27", x: 23.34, y: 52.84, w: 53.08, h: 0.94 }
+  ],
+  "23": [
+    { url: "https://mapy.com/cs/zakladni?source=base&id=2060506&x=15.9311681&y=49.5613177&z=17", x: 24.49, y: 50.02, w: 50.73, h: 0.98 },
+    { url: "https://mapy.com/cs/zakladni?source=base&id=1904741&x=15.8957844&y=49.5662800&z=16", x: 28.54, y: 89.78, w: 42.62, h: 0.68 }
+  ],
+  "24": [
+    { url: "https://www.dibavod.cz/index.php?id=27", x: 21.46, y: 56.31, w: 56.83, h: 0.77 }
+  ],
+  "25": [
+    { url: "https://www.dibavod.cz/index.php?id=27", x: 23.4, y: 67.17, w: 52.96, h: 1.03 }
+  ],
+  "26": [
+    { url: "https://www.dibavod.cz/index.php?id=27", x: 17.41, y: 54.04, w: 64.93, h: 1.03 }
+  ],
+  "27": [
+    { url: "https://mze.gov.cz/public/portal/mze/voda/osveta-a-publikace/publikace-a-dokumenty/modre-zpravy", x: 21.34, y: 17.23, w: 66.69, h: 1.11 },
+    { url: "https://mze.gov.cz/public/portal/mze/voda/osveta-a-publikace/publikace-a-dokumenty/modre-zpravy", x: 11.91, y: 19.24, w: 10.34, h: 0.86 },
+    { url: "https://www.voda.gov.cz/", x: 60.22, y: 35.78, w: 19.59, h: 1.11 }
+  ],
   "28": [
     { url: "https://www.calla.cz/atlas/detail.php?id=2183", x: 11.85, y: 44.04, w: 35.37, h: 1.24 },
     { url: "https://land.copernicus.eu/en/products/corine-land-cover/clc2018", x: 20.8, y: 48.44, w: 50.97, h: 1.2 },
