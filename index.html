@@ -19,7 +19,8 @@ a{color:var(--cyan);text-decoration:none}
 .topbar{display:none}
 header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .nav-in{display:flex;flex-direction:row;align-items:center;gap:66px;padding:12px 20px}
-.brand{font-weight:600;letter-spacing:.5px;font-family:"Fraunces",serif;color:var(--ink)}
+.brand{font-weight:600;letter-spacing:.5px;font-family:"Fraunces",serif;color:var(--ink);transition:color .15s ease}
+.brand:hover{color:var(--cyan)}
 .langtog{display:flex;border:1px solid var(--line);border-radius:3px;overflow:hidden}
 .langtog button{background:transparent;color:var(--mut);border:0;padding:5px 12px;cursor:pointer;font-weight:600;font-size:.75rem;font-family:"IBM Plex Mono",monospace}
 .langtog button.active{background:var(--cyan);color:var(--bg)}
@@ -151,7 +152,7 @@ body{padding-left:200px}header.nav{margin-left:-200px}footer{margin-left:-200px}
 </head>
 <body class="lang-cz">
 
-<header class="nav"><div class="nav-in"><span class="brand">Pavel&nbsp;Došek · GIS</span><div class="langtog"><button data-l="cz" class="active">CZ</button><button data-l="en">EN</button></div><button class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button></div></header><aside class="page-toc" id="pageToc">
+<header class="nav"><div class="nav-in"><a class="brand" href="#uvod">Pavel&nbsp;Došek · GIS</a><div class="langtog"><button data-l="cz" class="active">CZ</button><button data-l="en">EN</button></div><button class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button></div></header><aside class="page-toc" id="pageToc">
 <div class="page-toc-label"><span class="cz">Obsah</span><span class="en">Contents</span></div>
 <nav id="tocNav">
 <a href="#uvod"><span class="cz">Úvod</span><span class="en">Introduction</span></a>
